@@ -1,6 +1,6 @@
 {
   "name": "trade-butler",
-  "version": "1.6.5",
+  "version": "1.6.6",
   "description": "A local limit trading bot intended for use with Uniswap",
   "main": "index.js",
   "scripts": {
