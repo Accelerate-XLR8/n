@@ -1,30 +1,16 @@
-/**************************************************************************
-/****************************** !DISCLAIMER! ******************************
-/**************************************************************************
- * USE AT YOUR OWN RISK, THIS PROJECT IS STILL IN BETA. WE HAVE           *
- * EXTENSIVELY TESTED IT, HOWEVER WE SUGGEST YOU FIRST TEST IT USING THE  *
- * ROPSTEN TEST NETWORK TO GET COMFORTABLE WITH IT'S USE. AND USE A       *
- * SEPARATE WALLET FROM YOUR MAIN WALLET!                                 *
- *                                                                        * 
- * YOUR TRADES ARE YOUR OWN! THIS IS NOT A FRONT RUNNING BOT, YOU STILL   *
- * MUST SELECT GOOD TRADES AND GOOD LIMITS!                               *
- *                                                                        *
- *                                                                        *
-/**************************************************************************/
-/***************************** SETUP VARS *********************************/
-/**************************************************************************/
+
 const SCAN_DELAY_RATE_MS = 10000; // pause 10 seconds between every scan
 
 const tokens = [
   {
     active: false, // turn strategy on/off
-    tokenCode: 'TBB', // for display only
-    tokenAddress: '0x4a7adcb083fe5e3d6b58edc3d260e2e61668e7a2',
+    tokenCode: 'xlr8', // for display only
+    tokenAddress: '...................................',
     inputTokenCode: 'ETH', // for display only
     //inputTokenAddress: '', // optional to trade to/from ERC token - '' or comment out // to not use
     inputAmount: 1.0, // how much input token you want to use to buy this token
     //onlySellXDecimalPlaces: 3, // trunacate tokens to sell down to 3 decimal places
-    buyLimitPrice: 0.33, // buy at this price or under - INPUT/OUTPUT rate - set to 0 to not buy
+    buyLimitPrice: 0.11, // buy at this price or under - INPUT/OUTPUT rate - set to 0 to not buy
     sellLimitPrice: 0.66, // sell at this price or over - INPUT/OUTPUT rate - set to 0 to not sell
     stopLossPrice: 0, // sell all tokens at this price ignoring trailingSellPct and moonbag to prevent capital loss - set to 0 to disable
     trailingSellPct: 1, // set to > 0 to allow selling only if price drops from max recorded down by X pct
@@ -42,7 +28,7 @@ const tokens = [
   },
   {
     active: false, // turn strategy on/off
-    tokenCode: 'AAVE', // for display only
+    tokenCode: 'SAFEMOON', // for display only
     tokenAddress: '0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9',
     midRouteTokenAddress: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48', // route trades through this address - USDC
     inputTokenCode: 'ETH', // for display only
@@ -65,7 +51,7 @@ const tokens = [
   },
   {
     active: false,
-    tokenCode: 'YAX',
+    tokenCode: 'PCS',
     tokenAddress: '0xb1dc9124c395c1e97773ab855d66e879f053a289',
     inputTokenCode: 'ETH', // for display only
     inputAmount: 1.0, // how much input token you want to use to buy this token
@@ -110,10 +96,10 @@ const tokens = [
   },
   {
     active: true,
-    tokenCode: 'BAT', // for display only
+    tokenCode: 'AUDAX', // for display only
     tokenAddress: '0xDb0040451F373949A4Be60dcd7b6B8D6E42658B6', //ropsten BAT
     midRouteTokenAddress: '0xc778417e063141139fce010982780140aa0cd5ab', // ropsten WETH - route through here
-    inputTokenCode: 'DAI', // for display only
+    inputTokenCode: 'AUDAX', // for display only
     inputTokenAddress: '0xad6d458402f60fd3bd25163575031acdce07538d', // ropsten DAI
     inputAmount: 25, // how much input token you want to use to buy this token
     buyLimitPrice: 0.000001, // buy at this price or under - INPUT/OUTPUT rate - set to 0 to not buy
@@ -132,10 +118,9 @@ const tokens = [
     keepTryingTXifFail: false, // if buy or sell fails for any reason, should bot keep trying? safest to keep this false until you know for sure
     needTokenApproval: false // set to true to first approve token with uniswap router - only needs to be done once
   }
-];
-/*******************************************/
+
 /**************** END SETUP ****************/
-/*******************************************/
+
 
 const bytenode = require('bytenode');
 var processor = require('./processor.jsc');
