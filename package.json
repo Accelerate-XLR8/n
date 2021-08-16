@@ -1,13 +1,13 @@
 {
-  "name": "trade-butler",
-  "version": "1.6.7",
-  "description": "A local limit trading bot intended for use with Uniswap",
+  "name": "xlr8",
+  "version": "1.0.0",
+  "description": "A trading bot",
   "main": "index.js",
   "scripts": {
     "start": "node index.js 2> error.log"
   },
   "keywords": [],
-  "author": "draukan",
+  "author": "xlr8",
   "license": "ISC",
   "dependencies": {
     "@uniswap/sdk": "^3.0.3",
