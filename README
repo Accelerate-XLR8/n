@@ -28,11 +28,7 @@ Steps to use:
 10. To start running your cbn-bot, go back to your git cmd app and type "npm run start" then Enter key
 
 11. To terminate use "Ctrl + C"
-
-CBN -
-
-CBN Token Address - "0x080CAA2aca4a603F6A7a10C8Ea6041902f5B6b7d" LP Token Address - ".....…..............................."
-
+••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 1. .env - add your private key and wallet address and your
 
 2. .env - get an Infura and/or Alchemy API key. Get an infura API key from: https://infura.io/ - Use just project ID and not full links for API  .
